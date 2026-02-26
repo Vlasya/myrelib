@@ -11,7 +11,11 @@ describe('AppController (e2e)', () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
-
+    
+ beforeEach(async () => {
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
     app = moduleFixture.createNestApplication();
     await app.init();
   });
@@ -23,3 +27,4 @@ describe('AppController (e2e)', () => {
       .expect('Hello World!');
   });
 });
+//sdadas

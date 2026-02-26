@@ -21,6 +21,11 @@ model Genre {
   name  String  @unique
   books Book[]  @relation("BookGenres")
 }
+model Genre2 {
+  id    String  @id @default(uuid())
+  name  String  @unique
+  books Book[]  @relation("BookGenres")
+}
 
 model Book {
   id          String   @id @default(uuid())
